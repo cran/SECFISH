@@ -1,0 +1,10 @@
+exportPattern("^[[:alpha:]]+")
+import(stats)
+import(optimization)
+import(ggplot2)
+import(Hmisc)
+importFrom("graphics", "abline", "axis", "barplot", "box", "boxplot", "image", "layout", "legend", "lines", "mtext", "par",
+"plot", "plot.new", "points", "rasterImage", "strwidth", "text", "title")
+importFrom("grDevices", "dev.off", "jpeg")
+importFrom("graphics", "identify")
+importFrom("utils", "write.table")
