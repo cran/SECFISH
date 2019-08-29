@@ -1,9 +1,9 @@
-92a434bde74b962f66dd838b5926d4f7 *DESCRIPTION
+52f6940c641e09ff09533af33933b3ab *DESCRIPTION
 eb01e73436e46ca80a19aa82f46c605c *NAMESPACE
 dd5bfc42db940880da2d4460871a0746 *R/Consistency_checks.R
-ab8c6f7a3cfcf006aabd7a3c63c31656 *R/Contrained_regression.r
+424006c474624251c715d14beb5a7159 *R/Contrained_regression.r
 f612a374504849ab91770687ebc2b18d *R/Detecting_outliers.r
-095e3f35904a7dcab791ff7d07358215 *R/Disaggregation_of_the_costs.r
+669434e9d986b985bcd60a8e4b006cb7 *R/Disaggregation_of_the_costs.r
 9adab12c0ef6aa07500d087f2b2063c7 *R/EA.r
 8f4a3bde0b1d68f3d8417a609f2df2c9 *R/GLM.r
 7f177d794dacdd4347ff6f6e4ce128c0 *data/COSTS.rda

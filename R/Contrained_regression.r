@@ -58,7 +58,7 @@ DF[[1]]$Cost_best=opt$par[1]*DF[[1]]$Activity
 DF[[2]]$Cost_best=opt$par[2]*DF[[2]]$Activity
 
 
-jpeg(paste(path, "Figure1.jpg",sep=""),height=15,width=20,units="cm",res=300)
+jpeg(file.path(path, "Figure1.jpg"),height=15,width=20,units="cm",res=300)
 par(mai=c(0.5,0.5,0.5,0.5))                          #
 plot(DF[[1]]$Activity,DF[[1]]$Cost,xlab="Fishing Activity",ylim=c(0,300000), ylab="Costs",main=met1,cex.lab=1.8,cex.main=1.8)
 lines(DF[[1]]$Activity,DF[[1]]$Cost_best,col="red")
@@ -67,12 +67,16 @@ legend("topleft", c(paste("slope(lm)=", round(a,2)),paste("slope(minimized)=",ro
 dev.off()
 
 
-jpeg(paste(path, "Figure2.jpg",sep=""),height=15,width=20,units="cm",res=300)
+jpeg(file.path(path, "Figure2.jpg"),height=15,width=20,units="cm",res=300)
 par(mai=c(0.5,0.5,0.5,0.5))                          #
 plot(DF[[2]]$Activity,DF[[2]]$Cost,xlab="Fishing Activity",ylim=c(0,300000), ylab="Costs",main=met2,cex.lab=1.8,cex.main=1.8)
 lines(DF[[2]]$Activity,DF[[2]]$Cost_best,col="red")
 lines(DF[[2]]$Activity,DF[[2]]$Cost_est,col="blue")
 legend("topleft", c(paste("slope(lm)=", round(b,2)),paste("slope(minimized)=",round(opt$par[2],2))), col = c("blue", "red"), lty = c(1,1),lwd=c(2,2), merge = TRUE, bg = "gray95")
 dev.off()
+
+
+unlink(file.path(tempdir(),"Figure1.jpg"))
+unlink(file.path(tempdir(),"Figure2.jpg"))
 
 }

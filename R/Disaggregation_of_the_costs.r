@@ -143,7 +143,10 @@ Costs_disag_total1=Costs_disag_total1[,c(1:5,8,9)]
 
 }  # close the type of costs "for"
 
-write.table(Costs_disag_total,paste(path,"Costs_disaggregated.csv",sep=""),sep=";",row.names=F)
+write.table(Costs_disag_total,file.path(path, "Costs_disaggregated.csv"),sep=";",row.names=F)
  message("Disaggregation executed.",quote=F)
+
+unlink(file.path(tempdir(),"Costs_disaggregated.csv"))
+
 
 }
